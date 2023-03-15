@@ -23,7 +23,7 @@ jobs:
         uses: azure/sql-action@v2
         with:        
           connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
-          path: './database/TodoDB/TodoDB.sqlproj'
+          path: './database/TodoDB/todoApp.sqlproj'
           action: 'publish'
           build-arguments: '-c Release'
           arguments: '/p:DropObjectsNotInSource=false'
