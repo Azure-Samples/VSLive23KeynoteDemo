@@ -5,7 +5,7 @@
     "options": {
       "set-session-context": false
     },
-    "connection-string": "Server=localhost,1437;Database=tododb;User ID=btspendo;Password=2dgP2t@B$i*2U*Z2S&A7cbA0&MY3!UAV22*DO8Q5iD%%L#V7f8;TrustServerCertificate=true"
+    "connection-string": "Server=SERVER_NAME;Database=tododb;User ID=USER;Password=PASSWORD;TrustServerCertificate=true"
   },
   "runtime": {
     "rest": {
