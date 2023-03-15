@@ -1,0 +1,60 @@
+{
+  "$schema": "https://dataapibuilder.azureedge.net/schemas/v0.5.0-beta/dab.draft.schema.json",
+  "data-source": {
+    "database-type": "mssql",
+    "connection-string": "Server=localhost,1437;Database=tododb;User ID=btspendo;Password=2dgP2t@B$i*2U*Z2S&A7cbA0&MY3!UAV22*DO8Q5iD%%L#V7f8;TrustServerCertificate=true"
+  },
+  "runtime": {
+    "rest": {
+      "path": "/rest"
+    },
+    "graphql": {
+      "path": "/graphql"
+    },
+    "host": { 
+      "mode": "development",     
+      "cors": {
+        "origins": [ ],
+        "allow-credentials": false
+      },
+      "authentication": {
+        "provider": "StaticWebApps"
+      }
+    }
+  },
+  "entities": {
+    "Todo": {
+      "source": "dbo.todos",
+      "rest": {
+        "path": "todo"
+      },
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [
+            {
+              "action": "*",
+              "policy": {
+                "database": "@item.owner_id eq 'public'"
+              }
+            }            
+          ]
+        },
+        {
+          "role": "authenticated",
+          "actions": [
+            {
+              "action": "*",
+              "policy": {
+                "database": "@item.owner_id eq @claims.userId"
+              }
+            }            
+          ]
+        }        
+      ],
+      "mappings": {
+        "position": "order"
+      }      
+    }
+  }
+}
