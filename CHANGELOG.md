@@ -1,13 +1,5 @@
-## [project-title] Changelog
+# Visual Studio Live 2023 Keynote Demo Changelog
 
-<a name="x.y.z"></a>
-# x.y.z (yyyy-mm-dd)
+## Initial Release (2023-03-22)
 
-*Features*
-* ...
-
-*Bug Fixes*
-* ...
-
-*Breaking Changes*
-* ...
+*Initial release*
