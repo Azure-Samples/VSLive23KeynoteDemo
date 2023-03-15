@@ -14,6 +14,13 @@ This demo highlights the following features:
 * [Azure Functions](https://learn.microsoft.com/azure/azure-functions/functions-overview)
 * JAM Stack Development
 
+## Folder Structure
+
+* `/api`: the NodeJs Azure Function code used to provide the backend API, called by the Vue.Js client.
+* `/client`: the Vue.Js client. Original source code has been taken from official Vue.js sample and adapted to call a REST client instead of using local storage to save and retrieve todos
+* `/database`: the database projects to deploy the todos table and test via tSQLt
+* `/swa-db-connections`: database connection information for Data API builder/swa
+
 ## Getting Started
 
 ### Prerequisites
@@ -35,13 +42,6 @@ To run this demo, you will need to have the following:
   * swa build
   * swa start **(if using IPV6 on your local development environment, append -q 127.0.0.1 to swa start "swa start -q 127.0.0.1")**
 * Once swa is started, open a browser and go to https://localhost:4280/
-
-## Folder Structure
-
-* `/api`: the NodeJs Azure Function code used to provide the backend API, called by the Vue.Js client.
-* `/client`: the Vue.Js client. Original source code has been taken from official Vue.js sample and adapted to call a REST client instead of using local storage to save and retrieve todos
-* `/database`: the database projects to deploy the todos table and test via tSQLt
-* `/swa-db-connections`: database connection information for Data API builder/swa
 
 ## CI/CD Workflow with GitHub Actions
 
