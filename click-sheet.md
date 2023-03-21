@@ -112,40 +112,40 @@
     GET https://localhost:5001/api/todo
     ```
 
-Enter the following into the HTTP file and run the request:
+1. Enter the following into the HTTP file and run the request:
 
-```PWS
-POST  https://localhost:5001/api/todo
-
-{
-    "title": "REST Task",
-    "position": 1
-}
-```
+    ```PWS
+    POST  https://localhost:5001/api/todo
+    
+    {
+        "title": "REST Task",
+        "position": 1
+    }
+    ```
 
 1. Using ADS, query DB to show in the table
 
-```SQL
-select * from dbo.todos
-```
+    ```SQL
+    select * from dbo.todos
+    ```
 
 1. Show REST endpoint in browser and JSON returned
 
-```PWS
-https://localhost:5001/api/todo
-```
+    ```PWS
+    https://localhost:5001/api/todo
+    ```
 
 1. Run swa build in VS Code Terminal
 
-```PWS
-swa build
-```
+    ```PWS
+    swa build
+    ```
 
 1. run swa start in VS Code Terminal
 
-```PWS
-swa start
-```
+    ```PWS
+    swa start
+    ```
 
 1. Open the fully functional app in browser using the URL returned in the terminal window
 
