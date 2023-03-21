@@ -43,10 +43,3 @@ To run this demo, you will need to have the following:
   * swa start **(if using IPV6 on your local development environment, append -q 127.0.0.1 to swa start "swa start -q 127.0.0.1")**
 * Once swa is started, open a browser and go to https://localhost:4280/
 
-## CI/CD Workflow with GitHub Actions
-
-xxx
-
-## Publishing to Azure
-
-xxx
