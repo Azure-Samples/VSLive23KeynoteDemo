@@ -26,3 +26,19 @@ BEGIN
         EXEC tSQLt.Fail 'Todos table should not allow null for owner_id and default to public';
 END;
 GO
+
+
+CREATE PROCEDURE testTodoApp.[test that todo table has change tracking enabled]
+AS
+BEGIN
+    DECLARE @errorThrown bit; SET @errorThrown = 0;
+
+    IF NOT EXISTS(SELECT * FROM sys.objects O
+        INNER JOIN sys.change_tracking_tables CT ON O.object_id = CT.object_id
+        WHERE O.[name] = 'todos' AND O.[type] = 'U')
+    BEGIN
+        EXEC tSQLt.Fail 'Todos table should have change tracking enabled'
+    END
+
+END;
+GO
