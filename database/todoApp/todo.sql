@@ -5,3 +5,7 @@ CREATE TABLE [dbo].[todos] (
     [owner_id]  NVARCHAR (200)  CONSTRAINT [DEFAULT_todo_owner_id] DEFAULT 'public' NOT NULL,
     [position]  INT             NOT NULL
 );
+GO
+
+ALTER TABLE [dbo].[todos]
+ENABLE CHANGE_TRACKING;

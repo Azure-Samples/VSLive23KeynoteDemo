@@ -1,0 +1,9 @@
+{
+    "IsEncrypted": false,
+    "Values": {
+        "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+        "SqlConnectionString": "Server=localhost,1433;Database=todoApp;User ID=sa;Password=yourstrongdevelopmentpassword;Encrypt=True;TrustServerCertificate=True;",
+        "SendGridKeyAppSetting": "yoursendgridapikey",
+        "FUNCTIONS_WORKER_RUNTIME": "dotnet"
+    }
+}
